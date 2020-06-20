@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Interface } from 'readline';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,32 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  nombre: string;
+  apellidos: string;
+  edad: number;
+  
 
+
+  estudiantes: Estudiante[];
+
+  constructor() {
+    this.estudiantes = [];
+    this.crearEstudiante();
+  }
+  
+  crearEstudiante(){
+    this.estudiantes.push({
+      nombre: this.nombre,
+      apellidos: this.apellidos,
+      edad: this.edad,
+    });
+  }
+}
+
+
+
+interface Estudiante{
+  nombre: string;
+  apellidos: string;
+  edad: number;
 }
