@@ -20,7 +20,6 @@ import { HomePageRoutingModule } from './home-routing.module';
   ],
   declarations: [
   HomePage,
-  RestaurantsComponent,
   AboutComponent,
   FundamentsComponent],
   providers:[RestaurantsService]
